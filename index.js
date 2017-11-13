@@ -49,7 +49,7 @@ function multipart (req,options) {
         if ('GET' === req.method || 'HEAD' === req.method) return next();
 
         // check Content-Type
-        if (!typeis(req, 'multipart/form-data')) return resolve({no:400,msg:"没有包含文件"});
+        if (!typeis(req, 'multipart/form-data')) return resolve({no:404,msg:"没有包含文件"});
 
         // flag as parsed
         req._body = true;
@@ -86,11 +86,11 @@ function multipart (req,options) {
             done = true;
             // err.status = 400;
 
-            if (!req.readable) return resolve({msg:err});
+            if (!req.readable) return resolve({no:500,msg:err});
 
             req.resume();
             onFinished(req, function(){
-                resolve({no:400,msg:err});
+                resolve({no:500,msg:err});
             });
         });
 
@@ -105,7 +105,7 @@ function multipart (req,options) {
                 req.files = qs.parse(files, { allowDots: true });
                 resolve({no:200});
             } catch (err) {
-                resolve({no:400,msg:err})
+                resolve({no:500,msg:err})
             }
         });
 
