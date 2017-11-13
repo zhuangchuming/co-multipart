@@ -1,5 +1,5 @@
 {
-  "name": "co-multipart",
+  "name": "co-formpart",
   "version": "1.0.0",
   "description": "> 声明： 本文主要解析思想来自：https://github.com/expressjs/connect-multiparty",
   "main": "index.js",
@@ -11,9 +11,12 @@
     "url": "git+https://github.com/zhuangchuming/koa-multipart.git"
   },
   "author": "zhuangchuming",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zhuangchuming/koa-multipart/issues"
   },
-  "homepage": "https://github.com/zhuangchuming/koa-multipart#readme"
+  "homepage": "https://github.com/zhuangchuming/koa-multipart#readme",
+  "keywords": [
+    "co-formpart"
+  ]
 }
