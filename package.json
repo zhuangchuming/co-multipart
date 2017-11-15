@@ -1,6 +1,6 @@
 {
   "name": "co-formpart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "> 声明： 本文主要解析思想来自：https://github.com/expressjs/connect-multiparty",
   "main": "index.js",
   "scripts": {
